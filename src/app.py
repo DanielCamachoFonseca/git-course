@@ -2,9 +2,14 @@ from flask import Flask
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def index():
-    return "Hola Mundo!"
+    return "¡Index!"
+
+@app.route('/saludo')
+def greating():
+    return "¡Hola a todos!"
 
 
 @app.route('/sum/<int:a>/<int:b>')
